@@ -1,0 +1,28 @@
+{
+  "cli": {
+    "version": ">= 16.0.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://cuesphare-backend.onrender.com",
+        "EXPO_PUBLIC_WEBSITE_URL": "https://cuesphere.ashugangtok.workers.dev"
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://cuesphare-backend.onrender.com",
+        "EXPO_PUBLIC_WEBSITE_URL": "https://cuesphere.ashugangtok.workers.dev"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
