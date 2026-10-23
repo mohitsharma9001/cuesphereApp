@@ -1,23 +1,25 @@
 {
   "expo": {
-    "name": "cuesphere-app",
-    "slug": "cuesphere-app",
+    "name": "CueSphere",
+    "slug": "cuesphere",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "cuesphereapp",
-    "userInterfaceStyle": "automatic",
+    "scheme": "cuesphere",
+    "userInterfaceStyle": "dark",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "app.cuesphere.mobile"
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#0B0E12",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "app.cuesphere.mobile"
     },
     "web": {
       "bundler": "metro",
@@ -31,12 +33,20 @@
         {
           "image": "./assets/images/splash-icon.png",
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#0B0E12",
+          "dark": {
+            "backgroundColor": "#0B0E12"
+          }
         }
-      ]
+      ],
+      "expo-secure-store",
+      "expo-image",
+      "expo-video",
+      "@react-native-community/datetimepicker"
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "backgroundColor": "#0B0E12"
   }
 }
