@@ -7,9 +7,6 @@ import { useSession } from '@/lib/session';
 type RequireAuth = (reason: string, action: () => void) => void;
 const AuthGateContext = createContext<RequireAuth | null>(null);
 
-/** Gate a members-only action: `requireAuth('to register for this tournament', () => openSheet())`.
- * Signed in → runs now. Signed out → explains why and offers Log in / Create account;
- * after a successful log-in the user is back on the same screen and the action runs. */
 export function useRequireAuth(): RequireAuth {
   const gate = use(AuthGateContext);
   if (!gate) throw new Error('useRequireAuth must be used inside <AuthGateProvider>');
